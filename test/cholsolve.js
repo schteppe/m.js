@@ -32,7 +32,7 @@ exports.sample = function(test){
                 -0.190293021119217,  -0.272012537217569,   1.128980962077152  ],
     });
     b = m.ones(m.create(3,1));
-    var x = m.cholsolve(A,b,3);
+    var x = m.cholsolve(A,b);
 
     var sol = [ 4.74838461814586,
                 3.70844252823201,

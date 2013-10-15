@@ -10,8 +10,9 @@ module.exports = cholsolve;
  * @param  {m} b
  * @return {m} The solution x.
  */
-function cholsolve(A, b, n){
-    var a = A;
+function cholsolve(A, b){
+    var a = A,
+        n = b.length;
 
     // cholesky factorization
     // only works for symmetric positive definite matrices.
