@@ -1,0 +1,218 @@
+{
+    "project": {
+        "name": "m.js",
+        "description": "JavaScript math library",
+        "version": "0.0.0"
+    },
+    "files": {
+        "src/cholsolve.js": {
+            "name": "src/cholsolve.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/create.js": {
+            "name": "src/create.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/identity.js": {
+            "name": "src/identity.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/ones.js": {
+            "name": "src/ones.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/tridiag.js": {
+            "name": "src/tridiag.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "index.js": {
+            "name": "index.js",
+            "modules": {},
+            "classes": {
+                "M": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "M": {
+            "name": "M",
+            "shortname": "M",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "index.js",
+            "line": 1,
+            "description": "Matrix class",
+            "static": 1
+        }
+    },
+    "classitems": [
+        {
+            "file": "src/cholsolve.js",
+            "line": 3,
+            "description": "Solves a linear system Ax=b where A is positive definite, using cholesky\nfactorization.\nNote that the matrix A will be overwritten by the triangular matrix factor,\nand that the right hand side b will be overwritten by the solution.",
+            "itemtype": "method",
+            "name": "cholsolve",
+            "params": [
+                {
+                    "name": "A",
+                    "description": "",
+                    "type": "M"
+                },
+                {
+                    "name": "b",
+                    "description": "",
+                    "type": "M"
+                }
+            ],
+            "return": {
+                "description": "The solution x.",
+                "type": "M"
+            },
+            "class": "M"
+        },
+        {
+            "file": "src/create.js",
+            "line": 3,
+            "description": "Creates a new zero matrix",
+            "itemtype": "method",
+            "name": "create",
+            "params": [
+                {
+                    "name": "rows",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "cols",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "type",
+                            "description": "The array constructor to use. For example: Float32Array, Int16Array, Array...",
+                            "type": "Object",
+                            "optional": true
+                        },
+                        {
+                            "name": "data",
+                            "description": "Data to set. Should be an array of numbers.",
+                            "type": "Array",
+                            "optional": true
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "A new matrix",
+                "type": "M"
+            },
+            "class": "M"
+        },
+        {
+            "file": "src/identity.js",
+            "line": 3,
+            "description": "Set a matrix A to identity.",
+            "itemtype": "method",
+            "name": "identity",
+            "params": [
+                {
+                    "name": "out",
+                    "description": "",
+                    "type": "M"
+                },
+                {
+                    "name": "n",
+                    "description": "Size of the matrix",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "The matrix A",
+                "type": "M"
+            },
+            "class": "M"
+        },
+        {
+            "file": "src/ones.js",
+            "line": 3,
+            "description": "Set all the elements in m to one.",
+            "itemtype": "method",
+            "name": "ones",
+            "params": [
+                {
+                    "name": "m",
+                    "description": "",
+                    "type": "M"
+                }
+            ],
+            "return": {
+                "description": "The same matrix object",
+                "type": "M"
+            },
+            "class": "M"
+        },
+        {
+            "file": "src/tridiag.js",
+            "line": 3,
+            "description": "Tridiagonal matrix system solver. Solves A*x = v, where A is a tridiagonal matrix. See https://en.wikipedia.org/wiki/Tridiagonal_matrix_algorithm#C",
+            "itemtype": "method",
+            "name": "tridiag",
+            "params": [
+                {
+                    "name": "v",
+                    "description": "The right hand side. Note that this vector will be overwritten by the solution x.",
+                    "type": "M"
+                },
+                {
+                    "name": "N",
+                    "description": "The size of the matrix A.",
+                    "type": "Number"
+                },
+                {
+                    "name": "a",
+                    "description": "Subdiagonal (means it is the diagonal below the main diagonal)",
+                    "type": "M"
+                },
+                {
+                    "name": "b",
+                    "description": "Main diagonal",
+                    "type": "M"
+                },
+                {
+                    "name": "c",
+                    "description": "Superdiagonal (means it is the diagonal above the main diagonal)",
+                    "type": "M"
+                }
+            ],
+            "class": "M"
+        }
+    ],
+    "warnings": []
+}
