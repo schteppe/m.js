@@ -1,0 +1,9 @@
+{
+    "name": "m.js",
+    "description": "JavaScript math library",
+    "version": "0.0.0",
+    "options": {
+        "outdir" : "docs",
+        "paths" : ["."]
+    }
+}

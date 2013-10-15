@@ -5,9 +5,10 @@ module.exports = cholsolve;
  * factorization.
  * Note that the matrix A will be overwritten by the triangular matrix factor,
  * and that the right hand side b will be overwritten by the solution.
- * @param  {Array} A
- * @param  {Array} b
- * @return {Array} The solution x.
+ * @method cholsolve
+ * @param  {m} A
+ * @param  {m} b
+ * @return {m} The solution x.
  */
 function cholsolve(A, b, n){
     var a = A;

@@ -3,7 +3,12 @@ module.exports = create;
 /**
  * Creates a new zero matrix
  * @method create
- * @returns {m}
+ * @param {Number}  rows
+ * @param {Number}  cols
+ * @param {Object}  [options]
+ * @param {Object}  [options.type] The array constructor to use. For example: Float32Array, Int16Array, Array...
+ * @param {Array}   [options.data] Data to set. Should be an array of numbers.
+ * @return {m}     A new matrix
  */
 function create(rows,cols,options){
     options = options || {};

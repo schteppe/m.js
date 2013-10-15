@@ -1,20 +1,20 @@
 module.exports = identity;
 
 /**
- * Set a matrix to identity
+ * Set a matrix A to identity.
  * @method identity
  * @param  {m}      out
- * @param  {int}    n   Size of the matrix
- * @return {m}
+ * @param  {Number} n   Size of the matrix
+ * @return {m}          The matrix A
  */
-function identity(out,n) {
+function identity(A,n) {
     for(var i=0; i!==n; ++i){
         for(var j=0; j!==n; ++j){
             if(i===j)
-                out[j*n + i] = 1;
+                A[j*n + i] = 1;
             else
-                out[j*n + i] = 0;
+                A[j*n + i] = 0;
         }
     }
-    return out;
+    return A;
 };

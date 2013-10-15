@@ -3,11 +3,11 @@ module.exports = tridiag;
 /**
  * Tridiagonal matrix system solver. Solves A*x = v, where A is a tridiagonal matrix. See https://en.wikipedia.org/wiki/Tridiagonal_matrix_algorithm#C
  * @method tridiag
- * @param {Array}  v  The right hand side. Note that this vector will be overwritten by the solution x.
+ * @param {m}  v  The right hand side. Note that this vector will be overwritten by the solution x.
  * @param {Number} N  The size of the matrix A.
- * @param {Array}  a  Subdiagonal (means it is the diagonal below the main diagonal)
- * @param {Array}  b  Main diagonal
- * @param {Array}  c  Superdiagonal (means it is the diagonal above the main diagonal)
+ * @param {m}  a  Subdiagonal (means it is the diagonal below the main diagonal)
+ * @param {m}  b  Main diagonal
+ * @param {m}  c  Superdiagonal (means it is the diagonal above the main diagonal)
  */
 function tridiag(v, a, b, c){
     var x = v,
